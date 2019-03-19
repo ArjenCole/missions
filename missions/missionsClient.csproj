@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10416ABE-B6BD-4F72-A598-5F3EDB789833}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>missions</RootNamespace>
+    <AssemblyName>missions</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.3.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>missions.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>m.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Visual Studio Tools for Office\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MissionStatusBar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\170726MissionStatusBar1\MissionStatusBar\bin\Debug\MissionStatusBar.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data">
+      <HintPath>C:\Users\error\Desktop\missions\mysql-connector-net-6.6.7-noinstall\v4\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data.entity">
+      <HintPath>C:\Users\error\Desktop\missions\mysql-connector-net-6.6.7-noinstall\v4\mysql.data.entity.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.visualstudio">
+      <HintPath>C:\Users\error\Desktop\missions\mysql-connector-net-6.6.7-noinstall\v4\mysql.visualstudio.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.web">
+      <HintPath>C:\Users\error\Desktop\missions\mysql-connector-net-6.6.7-noinstall\v4\mysql.web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmAbout.Designer.cs">
+      <DependentUpon>FmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmInputBox.Designer.cs">
+      <DependentUpon>FmInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmStaffs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmStaffs.Designer.cs">
+      <DependentUpon>FmStaffs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mscAuthority.cs" />
+    <Compile Include="mscExcel.cs" />
+    <Compile Include="FmDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmDepartment.Designer.cs">
+      <DependentUpon>FmDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmLogIn.Designer.cs">
+      <DependentUpon>FmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmMain.Designer.cs">
+      <DependentUpon>FmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmMission.Designer.cs">
+      <DependentUpon>FmMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmMissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmMissions.Designer.cs">
+      <DependentUpon>FmMissions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmStatistics.Designer.cs">
+      <DependentUpon>FmStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmProject.Designer.cs">
+      <DependentUpon>FmProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmStaffInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmStaffInfo.Designer.cs">
+      <DependentUpon>FmStaffInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItoDataTable.cs" />
+    <Compile Include="mcData\mcDepartment.cs" />
+    <Compile Include="mcData\mcMission.cs" />
+    <Compile Include="mcSocketClient.cs" />
+    <Compile Include="mcData\mcStaff.cs" />
+    <Compile Include="mscCtrl.cs" />
+    <Compile Include="mscEnCode.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FmAbout.resx">
+      <DependentUpon>FmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmDepartment.resx">
+      <DependentUpon>FmDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmInputBox.resx">
+      <DependentUpon>FmInputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmLogIn.resx">
+      <DependentUpon>FmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmMain.resx">
+      <DependentUpon>FmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmMission.resx">
+      <DependentUpon>FmMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmMissions.resx">
+      <DependentUpon>FmMissions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmStaffs.resx">
+      <DependentUpon>FmStaffs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmStatistics.resx">
+      <DependentUpon>FmStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmProject.resx">
+      <DependentUpon>FmProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmStaffInfo.resx">
+      <DependentUpon>FmStaffInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="m.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
